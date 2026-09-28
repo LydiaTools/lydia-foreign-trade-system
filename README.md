@@ -2,6 +2,12 @@
 
 Lydia 自有的外贸获客工作台。它把散落的询盘、公开企业信息、联系人证据和熟人关系线索整理为可核查的客户档案，并给出分级与下一步建议。
 
+Local-first export-sales workbench: import inquiries, review evidence and missing fields, and decide who to follow up with. **[English quick start](docs/README.en.md)** · [反馈问题](https://github.com/lydiahub19921013/lydia-foreign-trade-system/issues)
+
+![Lydia 外贸工作台使用仓库内虚构样例的真实运行界面：询盘分级、缺失证据和跟进建议。](docs/assets/workbench-demo.png)
+
+截图由本机实际运行后载入“使用虚构样例”生成；样例企业、联系人和数据均为虚构，不是客户名单、真实成交或评分有效性的证明。
+
 当前可用的四条链路：
 
 1. 批量导入阿里巴巴、中国制造网或人工整理的询盘 CSV/JSON；
@@ -31,9 +37,15 @@ Lydia 自有的外贸获客工作台。它把散落的询盘、公开企业信�
 
 需要 Node.js 20 或更高版本，无需安装第三方依赖。
 
+首次使用，先获取源码再启动：
+
 ```bash
+git clone https://github.com/lydiahub19921013/lydia-foreign-trade-system.git
+cd lydia-foreign-trade-system
 npm run workbench
 ```
+
+打开终端显示的本机地址，点击 **“使用虚构样例”**，核对字段映射后点击 **“确认映射并导入”**：可以查看导入后的等级汇总、客户卡片、缺失证据和下一步。这个试用流程不需要 API Key，也不需要上传自己的客户数据。停止服务时按 `Ctrl+C`。
 
 然后打开终端显示的本机地址，在网页里选择 CSV 后先核对字段映射，再确认导入、查看分级、查询企业、评估信任路径并导出结果。也可以继续使用命令行：
 
@@ -70,3 +82,7 @@ git subtree pull --prefix apps/communication-extension \
 ## 规划
 
 详见 [系统架构](./docs/ARCHITECTURE.md)、[客户调研](./docs/CUSTOMER_RESEARCH.md)、[渠道导入](./docs/CHANNEL_IMPORTS.md)、[客户开发记录](./docs/DEVELOPMENT_TRACKING.md)、[客户空间](./docs/CUSTOMER_WORKSPACES.md)、[本机自动保存](./docs/LOCAL_PERSISTENCE.md)、[证据复核](./docs/EVIDENCE_REVIEW.md)、[重复客户](./docs/DUPLICATE_REVIEW.md)、[公开候选](./docs/PUBLIC_PROSPECTS.md)、[官网档案](./docs/WEBSITE_DOSSIER.md)、[候选邮箱](./docs/EMAIL_CANDIDATES.md)、[关系数据导入](./docs/RELATIONSHIP_IMPORTS.md) 和 [路线图](./docs/ROADMAP.md)。
+
+## 反馈与贡献
+
+请先用虚构样例复现问题，再按 [CONTRIBUTING.md](CONTRIBUTING.md) 提交最小复现和相关检查结果。不要把真实询盘、联系人信息、客户备份或凭据放进 Issue、截图和 PR。如果工具确实帮你完成了工作，欢迎 Star；使用不以 Star 为条件。
