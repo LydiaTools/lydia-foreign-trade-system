@@ -1,12 +1,10 @@
 # Lydia 外贸系统
 
-Lydia 自有的外贸获客工作台。它把散落的询盘、公开企业信息、联系人证据和熟人关系线索整理为可核查的客户档案，并给出分级与下一步建议。
+我把自己在外贸业务中积累的询盘筛选、客户背调和跟进方法，整理成这套工作台。它把散落的询盘、公开企业信息、联系人证据和熟人关系线索整理为可核查的客户档案，帮助外贸人员看清谁值得优先跟进、还缺哪些信息、下一步该做什么。
 
 Local-first export-sales workbench: import inquiries, review evidence and missing fields, and decide who to follow up with. **[English quick start](docs/README.en.md)** · [反馈问题](https://github.com/lydiahub19921013/lydia-foreign-trade-system/issues)
 
-![Lydia 外贸工作台使用仓库内虚构样例的真实运行界面：询盘分级、缺失证据和跟进建议。](docs/assets/workbench-demo.png)
-
-截图由本机实际运行后载入“使用虚构样例”生成；样例企业、联系人和数据均为虚构，不是客户名单、真实成交或评分有效性的证明。
+![Lydia 外贸工作台界面：询盘分级、待补信息和跟进建议。](docs/assets/workbench-demo.png)
 
 当前可用的四条链路：
 
@@ -45,9 +43,10 @@ cd lydia-foreign-trade-system
 npm run workbench
 ```
 
-打开终端显示的本机地址，点击 **“使用虚构样例”**，核对字段映射后点击 **“确认映射并导入”**：可以查看导入后的等级汇总、客户卡片、缺失证据和下一步。这个试用流程不需要 API Key，也不需要上传自己的客户数据。停止服务时按 `Ctrl+C`。
+打开终端显示的本机地址，选择自己的询盘 CSV 或 JSON。CSV 先核对字段映射，再点击 **“确认映射并导入”**，查看客户分级、待补信息和跟进建议。按需要查询企业资料、评估信任路径并导出结果。导入和分级不需要 API Key，客户文件在本机处理；停止服务时按 `Ctrl+C`。
 
-然后打开终端显示的本机地址，在网页里选择 CSV 后先核对字段映射，再确认导入、查看分级、查询企业、评估信任路径并导出结果。也可以继续使用命令行：
+<details>
+<summary>命令行与开发检查</summary>
 
 ```bash
 npm run qualify -- examples/inquiries.sample.csv
@@ -55,7 +54,9 @@ npm run qualify -- examples/inquiries.sample.csv --output ./qualification-result
 npm run check
 ```
 
-所有示例均为虚构数据，包括可用于恢复演练的 [`examples/workspace-backup.sample.json`](./examples/workspace-backup.sample.json)。询盘、候选、研究结果和关系路径只在当前本机客户空间处理并自动保存，不抓取私人资料、不发送消息。只有使用者主动确认查询时才联网：Exa 接收选中的公开搜索词；GLEIF 接收企业名称和可选司法辖区；指定官网按使用者选择读取一页，或最多 5 张同站的联系/公司/工厂/产品页；邮箱候选只查询企业域名 DNS，联系人姓名不离开浏览器。询盘正文、关系文件和其他联系人资料不会自动发送。浏览器本机数据和导出的完整备份都未加密，客户空间也不是云备份、账号权限或 SaaS 多租户；重要批次应导出完整备份，并存放在使用者自己的受控位置。详细边界见 [客户空间](./docs/CUSTOMER_WORKSPACES.md) 和 [本机自动保存](./docs/LOCAL_PERSISTENCE.md)。搜索摘要、官网公开联系方式和生成邮箱全部先视为候选，也不等于营销同意。
+</details>
+
+询盘、候选、研究结果和关系路径只在当前本机客户空间处理并自动保存，不抓取私人资料、不发送消息。只有使用者主动确认查询时才联网：Exa 接收选中的公开搜索词；GLEIF 接收企业名称和可选司法辖区；指定官网按使用者选择读取一页，或最多 5 张同站的联系/公司/工厂/产品页；邮箱候选只查询企业域名 DNS，联系人姓名不离开浏览器。询盘正文、关系文件和其他联系人资料不会自动发送。浏览器本机数据和导出的完整备份都未加密，客户空间也不是云备份、账号权限或 SaaS 多租户；重要批次应导出完整备份，并存放在使用者自己的受控位置。详细边界见 [客户空间](./docs/CUSTOMER_WORKSPACES.md) 和 [本机自动保存](./docs/LOCAL_PERSISTENCE.md)。搜索摘要、官网公开联系方式和生成邮箱全部先视为候选，也不等于营销同意。
 
 ## 系统边界
 
@@ -77,7 +78,7 @@ git subtree pull --prefix apps/communication-extension \
 
 ## 开源、品牌与授权
 
-本仓库以 [MIT License](./LICENSE) 开源。产品代码、配置、示例和界面只使用虚构 Lydia 示例信息，不代表任何原公司或第三方；请勿把真实客户资料、登录态、API Key、私人关系数据或抓取快照提交到仓库。外部开源项目仅在许可证允许范围内借鉴或适配；依法需要保留的许可证和归属见 [THIRD_PARTY_NOTICES.md](./THIRD_PARTY_NOTICES.md)。
+本仓库以 [MIT License](./LICENSE) 开源。请勿把真实客户资料、登录态、API Key、私人关系数据或抓取快照提交到仓库。外部开源项目仅在许可证允许范围内借鉴或适配；依法需要保留的许可证和归属见 [THIRD_PARTY_NOTICES.md](./THIRD_PARTY_NOTICES.md)。
 
 ## 规划
 
@@ -85,4 +86,4 @@ git subtree pull --prefix apps/communication-extension \
 
 ## 反馈与贡献
 
-请先用虚构样例复现问题，再按 [CONTRIBUTING.md](CONTRIBUTING.md) 提交最小复现和相关检查结果。不要把真实询盘、联系人信息、客户备份或凭据放进 Issue、截图和 PR。如果工具确实帮你完成了工作，欢迎 Star；使用不以 Star 为条件。
+按 [CONTRIBUTING.md](CONTRIBUTING.md) 提交复现步骤和相关检查结果。不要把真实询盘、联系人信息、客户备份或凭据放进 Issue、截图和 PR。如果工具确实帮你完成了工作，欢迎 Star；使用不以 Star 为条件。
