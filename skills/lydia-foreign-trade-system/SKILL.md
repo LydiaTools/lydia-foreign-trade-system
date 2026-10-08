@@ -7,8 +7,8 @@ description: 处理 Lydia 外贸获客系统的批量询盘背调分级、海外
 
 ## 权威位置
 
-- 本地仓库：`/Users/macmini/Documents/ChatGPT/我的口播视频/outputs/lydia-foreign-trade-system`
-- 私有仓库：`https://github.com/lydiahub19921013/lydia-foreign-trade-system`
+- 本地仓库：当前仓库根目录
+- 公开仓库：`https://github.com/LydiaTools/lydia-foreign-trade-system`
 - 外贸沟通插件：仓库内 `apps/communication-extension`
 
 先判断任务属于哪条链路，只读取对应 reference：

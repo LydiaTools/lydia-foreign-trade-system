@@ -9,7 +9,7 @@ A workbench built from my practical experience in export sales: qualifying inqui
 Requires **Node.js 20 or newer** and a modern browser. The workbench does not require third-party package installation.
 
 ```sh
-git clone https://github.com/lydiahub19921013/lydia-foreign-trade-system.git
+git clone https://github.com/LydiaTools/lydia-foreign-trade-system.git
 cd lydia-foreign-trade-system
 npm run workbench
 ```

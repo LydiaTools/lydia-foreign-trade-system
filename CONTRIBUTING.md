@@ -8,7 +8,7 @@
 
 不要上传真实客户名单、联系方式、询盘正文、客户备份、私人关系、API Key、Cookie 或登录截图。评分和候选信息不是采购意愿、信用或营销同意的证明。
 
-可以使用[问题反馈表](https://github.com/lydiahub19921013/lydia-foreign-trade-system/issues/new?template=bug-report.yml)，按环境、虚构样例、操作步骤和期望/实际结果整理复现。提交 Issue 需要 GitHub 账号，本机使用系统不需要。
+可以使用[问题反馈表](https://github.com/LydiaTools/lydia-foreign-trade-system/issues/new?template=bug-report.yml)，按环境、虚构样例、操作步骤和期望/实际结果整理复现。提交 Issue 需要 GitHub 账号，本机使用系统不需要。
 
 ## 提交改动
 

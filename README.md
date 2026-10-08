@@ -2,7 +2,7 @@
 
 我把自己在外贸业务中积累的询盘筛选、客户背调和跟进方法，整理成这套工作台。它把散落的询盘、公开企业信息、联系人证据和熟人关系线索整理为可核查的客户档案，帮助外贸人员看清谁值得优先跟进、还缺哪些信息、下一步该做什么。
 
-Local-first export-sales workbench: import inquiries, review evidence and missing fields, and decide who to follow up with. **[English quick start](docs/README.en.md)** · [反馈问题](https://github.com/lydiahub19921013/lydia-foreign-trade-system/issues)
+Local-first export-sales workbench: import inquiries, review evidence and missing fields, and decide who to follow up with. **[English quick start](docs/README.en.md)** · [反馈问题](https://github.com/LydiaTools/lydia-foreign-trade-system/issues)
 
 ![Lydia 外贸工作台界面：询盘分级、待补信息和跟进建议。](docs/assets/workbench-demo.png)
 
@@ -38,7 +38,7 @@ Local-first export-sales workbench: import inquiries, review evidence and missin
 首次使用，先获取源码再启动：
 
 ```bash
-git clone https://github.com/lydiahub19921013/lydia-foreign-trade-system.git
+git clone https://github.com/LydiaTools/lydia-foreign-trade-system.git
 cd lydia-foreign-trade-system
 npm run workbench
 ```
@@ -71,7 +71,7 @@ npm run check
 
 ```bash
 git subtree pull --prefix apps/communication-extension \
-  https://github.com/lydiahub19921013/foreign-trade-development-plugin.git main --squash
+  https://github.com/LydiaTools/foreign-trade-development-plugin.git main --squash
 ```
 
 公开资料只能作为线索和证据，不能冒充已确认事实；候选邮箱不能写成“已验证邮箱”。CSV 的建议映射也不是平台兼容承诺，必须在导入前核对，详见 [渠道导入](./docs/CHANNEL_IMPORTS.md)。官网结果必须逐条选择后才能进入客户档案，所选证据保留人工决定时间和具体来源。发现错误时应在客户证据中驳回或修订；完整规则见 [证据复核与字段回滚](./docs/EVIDENCE_REVIEW.md)。重复候选也不会自动合并或删除，详见 [重复客户与主账户](./docs/DUPLICATE_REVIEW.md)。开发阶段和结果回测见 [客户开发记录](./docs/DEVELOPMENT_TRACKING.md)，不同客户分区见 [客户空间](./docs/CUSTOMER_WORKSPACES.md)，本机保存、恢复和清除见 [本机自动保存](./docs/LOCAL_PERSISTENCE.md)。系统不按姓名、国籍、性别等敏感或无关属性判断客户质量。
